@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: nexaai
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.6-luna
+      - key: FREE_MONTHLY_MESSAGES
+        value: "100"
+      - key: PRO_MONTHLY_MESSAGES
+        value: "5000"
+      - key: ADMIN_EMAIL
+        sync: false
